@@ -5,6 +5,8 @@
 //  Created by Alex Kerendian on 1/14/21.
 //
 
+import Foundation
+
 typealias Probability = Double
 
 extension Probability {
@@ -13,12 +15,13 @@ extension Probability {
         case 0:
             return "❌"
             
-        case 100:
+        case 1:
             return "✅"
             
         default:
-            let value = String(format: "%.1f", self)
-            return "\(value)%"
+            let value = self * 100
+            let str = String(format: "%.1f", value)
+            return "\(str)%"
         }
     }
 }

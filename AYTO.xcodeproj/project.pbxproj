@@ -13,6 +13,8 @@
 		A20356C025B0AF6100E452E9 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20356BF25B0AF6100E452E9 /* Event.swift */; };
 		A217C6A525B0D56D00026AF9 /* SeasonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A217C6A425B0D56D00026AF9 /* SeasonStore.swift */; };
 		A217C6AA25B0E3E500026AF9 /* Probability.swift in Sources */ = {isa = PBXBuildFile; fileRef = A217C6A925B0E3E500026AF9 /* Probability.swift */; };
+		A28E56CE25B3393900303EBC /* AYTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28E56CD25B3393900303EBC /* AYTO.swift */; };
+		A28E56D425B3613500303EBC /* PermutationGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28E56D325B3613500303EBC /* PermutationGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +37,8 @@
 		A20356BF25B0AF6100E452E9 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Event.swift; path = ../../../ayto/AYTO/Model/Event.swift; sourceTree = "<group>"; };
 		A217C6A425B0D56D00026AF9 /* SeasonStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonStore.swift; sourceTree = "<group>"; };
 		A217C6A925B0E3E500026AF9 /* Probability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Probability.swift; sourceTree = "<group>"; };
+		A28E56CD25B3393900303EBC /* AYTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AYTO.swift; sourceTree = "<group>"; };
+		A28E56D325B3613500303EBC /* PermutationGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermutationGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 		A20356A925B0883500E452E9 /* AYTO */ = {
 			isa = PBXGroup;
 			children = (
+				A28E56D225B3610700303EBC /* AYTO */,
 				A20356B725B0ACFA00E452E9 /* Model */,
 				A20356B425B0AC4100E452E9 /* ModelStore */,
 				A20356B325B0AC1800E452E9 /* Main */,
@@ -99,6 +104,15 @@
 				A20356B925B0AE7A00E452E9 /* Season.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A28E56D225B3610700303EBC /* AYTO */ = {
+			isa = PBXGroup;
+			children = (
+				A28E56CD25B3393900303EBC /* AYTO.swift */,
+				A28E56D325B3613500303EBC /* PermutationGenerator.swift */,
+			);
+			path = AYTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +174,9 @@
 			files = (
 				A20356C025B0AF6100E452E9 /* Event.swift in Sources */,
 				A20356BA25B0AE7A00E452E9 /* Season.swift in Sources */,
+				A28E56CE25B3393900303EBC /* AYTO.swift in Sources */,
 				A217C6A525B0D56D00026AF9 /* SeasonStore.swift in Sources */,
+				A28E56D425B3613500303EBC /* PermutationGenerator.swift in Sources */,
 				A20356BD25B0AF5700E452E9 /* Episode.swift in Sources */,
 				A20356AB25B0883500E452E9 /* main.swift in Sources */,
 				A217C6AA25B0E3E500026AF9 /* Probability.swift in Sources */,
