@@ -15,6 +15,7 @@
 		A217C6AA25B0E3E500026AF9 /* Probability.swift in Sources */ = {isa = PBXBuildFile; fileRef = A217C6A925B0E3E500026AF9 /* Probability.swift */; };
 		A28E56CE25B3393900303EBC /* AYTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28E56CD25B3393900303EBC /* AYTO.swift */; };
 		A28E56D425B3613500303EBC /* PermutationGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28E56D325B3613500303EBC /* PermutationGenerator.swift */; };
+		A2F0032F25B75A340031F429 /* ConsoleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F0032E25B75A340031F429 /* ConsoleIO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,7 @@
 		A217C6A925B0E3E500026AF9 /* Probability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Probability.swift; sourceTree = "<group>"; };
 		A28E56CD25B3393900303EBC /* AYTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AYTO.swift; sourceTree = "<group>"; };
 		A28E56D325B3613500303EBC /* PermutationGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermutationGenerator.swift; sourceTree = "<group>"; };
+		A2F0032E25B75A340031F429 /* ConsoleIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleIO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				A28E56D225B3610700303EBC /* AYTO */,
+				A2F0032D25B75A1F0031F429 /* ConsoleIO */,
 				A20356B725B0ACFA00E452E9 /* Model */,
 				A20356B425B0AC4100E452E9 /* ModelStore */,
 				A20356B325B0AC1800E452E9 /* Main */,
@@ -113,6 +116,14 @@
 				A28E56D325B3613500303EBC /* PermutationGenerator.swift */,
 			);
 			path = AYTO;
+			sourceTree = "<group>";
+		};
+		A2F0032D25B75A1F0031F429 /* ConsoleIO */ = {
+			isa = PBXGroup;
+			children = (
+				A2F0032E25B75A340031F429 /* ConsoleIO.swift */,
+			);
+			path = ConsoleIO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2F0032F25B75A340031F429 /* ConsoleIO.swift in Sources */,
 				A20356C025B0AF6100E452E9 /* Event.swift in Sources */,
 				A20356BA25B0AE7A00E452E9 /* Season.swift in Sources */,
 				A28E56CE25B3393900303EBC /* AYTO.swift in Sources */,
