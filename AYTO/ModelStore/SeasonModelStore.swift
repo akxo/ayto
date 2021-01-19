@@ -1,11 +1,11 @@
 //
-//  SeasonStore.swift
+//  SeasonModelStore.swift
 //  AYTO
 //
 //  Created by Alex Kerendian on 1/14/21.
 //
 
-struct SeasonStore {
+struct SeasonModelStore {
     
     static func season(for seasonNumber: Int) -> Season? {
         switch seasonNumber {
