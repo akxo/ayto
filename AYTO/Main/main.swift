@@ -6,7 +6,7 @@
 //
 
 var seasonNumber: Int!
-print("what season are you watching? (1-10)")
+print("\n\nwhat season are you watching? (1-10)")
 
 while seasonNumber == nil {
     let str = ConsoleIO.input
@@ -35,5 +35,5 @@ while episodeNumber == nil {
     print("please enter a valid episode number. (1-\(season.episodes.count))")
 }
 
-print("\ncalculating probability for season \(seasonNumber!) through episode \(episodeNumber!)...\n\n")
+print("\n")
 AYTO.calculateProbability(for: season, through: episodeNumber)

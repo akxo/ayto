@@ -11,14 +11,14 @@ struct AYTO {
     
     static func calculateProbability(for season: Season, through episodeNumber: Int) {
         remainingGuesses = allGuesses(for: season.guys.count, and: season.girls.count)
-//        printProbability(for: season.guys, and: season.girls)
         
         for index in 0..<episodeNumber {
             let episode = season.episodes[index]
-            print("Episode \(episode.id)")
+            print("Episode \(episode.id):\n")
             
             for event in episode.events {
                 calculateProbability(after: event)
+                printDescription(for: event, in: season)
                 printProbability(for: season.guys, and: season.girls)
             }
         }
@@ -49,8 +49,19 @@ struct AYTO {
         return count
     }
     
-    private static func printProbability(for guys: [String], and girls: [String]) {
-        print("\(remainingGuesses.count) guess(es) left")
+    private static func printDescription(for event: Event, in season: Season) {
+        switch event {
+        case .truthBooth(let guy, let girl, let isMatch):
+            let emoji = isMatch ? "✅" : "❌"
+            print("Truth Booth: \(season.guys[guy]) + \(season.girls[girl]) = \(emoji)\n")
+            
+        case .matchupCeremony(_, let numberOfBeams):
+            print("Matchup Ceremony: \(numberOfBeams) beam(s)\n")
+        }
+    }
+    
+    private static func printProbability(for guys: [String], and girls: [String], isIntro: Bool = false) {
+//        print("\(remainingGuesses.count) guess(es) left")
         let maxNumberOfCharacters = (guys + girls).map { $0.count }.max() ?? 0
         
         for row in -1..<girls.count {
