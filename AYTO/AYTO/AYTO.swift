@@ -56,11 +56,7 @@ struct AYTO {
             print("Truth Booth: \(season.guys[guy]) + \(season.girls[girl]) = \(emoji)\n")
             
         case .matchupCeremony(_, let numberOfBeams):
-            if numberOfBeams == 0 {
-                print("Matchup Ceremony: BLACKOUT")
-            } else {
-                print("Matchup Ceremony: \(numberOfBeams) beam(s)\n")
-            }
+            print("Matchup Ceremony: \(numberOfBeams) beam(s)\n")
         }
     }
     

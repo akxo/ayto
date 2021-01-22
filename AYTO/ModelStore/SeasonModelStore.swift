@@ -15,6 +15,9 @@ struct SeasonModelStore {
         case 3:
             return season3
             
+        case 4:
+            return season4
+            
         default:
             return nil
         }
@@ -99,7 +102,13 @@ struct SeasonModelStore {
                                                     ]),
                                         ])
     
-    private static var season3 = Season(id: 3,
+    // MARK: - Season 2
+    
+    
+    
+    // MARK: - Season 3
+    
+    private static let season3 = Season(id: 3,
                                         guys: [
                                             "Alec",
                                             "Austin",
@@ -175,5 +184,86 @@ struct SeasonModelStore {
                                                         .truthBooth(guy: 9, girl: 5, isMatch: true),
                                                         .matchupCeremony(couples: [0, 1, 7, 2, 8, 4, 6, 9, 3, 5], numberOfBeams: 10)
                                                     ]),
+                                        ])
+    
+    // MARK: - Season 4
+    
+    private static let season4 = Season(id: 4,
+                                        guys: [
+                                            "Asaf",
+                                            "Cam",
+                                            "Cameron",
+                                            "Giovanni",
+                                            "John",
+                                            "Morgan",
+                                            "Prosper",
+                                            "Sam",
+                                            "Stephen",
+                                            "Tyler"
+                                        ],
+                                        girls: [
+                                            "Alyssa",
+                                            "Camille",
+                                            "Emma",
+                                            "Francesca",
+                                            "Julia",
+                                            "Kaylen",
+                                            "Mikala",
+                                            "Nicole",
+                                            "Tori",
+                                            "Victoria"
+                                        ],
+                                        episodes: [
+                                            Episode(id: 1,
+                                                    events: [
+                                                        .truthBooth(guy: 6, girl: 8, isMatch: false),
+                                                        .matchupCeremony(couples: [3, 9, 6, 5, 2, 4, 1, 0, 7, 8], numberOfBeams: 3)
+                                                    ]),
+                                            Episode(id: 2,
+                                                    events: [
+                                                        .truthBooth(guy: 4, girl: 4, isMatch: false),
+                                                        .matchupCeremony(couples: [1, 4, 6, 5, 7, 0, 2, 3, 8, 9], numberOfBeams: 3)
+                                                    ]),
+                                            Episode(id: 3,
+                                                    events: [
+                                                        .truthBooth(guy: 2, girl: 6, isMatch: true),
+                                                        .matchupCeremony(couples: [1, 7, 6, 5, 9, 3, 2, 0, 8, 4], numberOfBeams: 4)
+                                                        
+                                                    ]),
+                                            Episode(id: 4,
+                                                    events: [
+                                                        .truthBooth(guy: 0, girl: 8, isMatch: false),
+                                                        .matchupCeremony(couples: [1, 2, 6, 5, 9, 8, 7, 0, 4, 3], numberOfBeams: 4)
+                                                    ]),
+                                            Episode(id: 5,
+                                                    events: [
+                                                        .truthBooth(guy: 3, girl: 5, isMatch: false),
+                                                        .matchupCeremony(couples: [1, 2, 6, 3, 8, 4, 9, 0, 7, 5], numberOfBeams: 4)
+                                                    ]),
+                                            Episode(id: 6,
+                                                    events: [
+                                                        .truthBooth(guy: 7, girl: 0, isMatch: true),
+                                                        .matchupCeremony(couples: [1, 9, 6, 3, 2, 8, 5, 0, 4, 7], numberOfBeams: 4)
+                                                    ]),
+                                            Episode(id: 7,
+                                                    events: [
+                                                        .truthBooth(guy: 1, girl: 9, isMatch: false),
+                                                        .matchupCeremony(couples: [3, 7, 6, 2, 5, 8, 9, 0, 4, 1], numberOfBeams: 4)
+                                                    ]),
+                                            Episode(id: 8,
+                                                    events: [
+                                                        .truthBooth(guy: 3, girl: 4, isMatch: false),
+                                                        .matchupCeremony(couples: [1, 8, 6, 7, 5, 9, 3, 0, 4, 2], numberOfBeams: 2)
+                                                    ]),
+                                            Episode(id: 9,
+                                                    events: [
+                                                        .truthBooth(guy: 6, girl: 2, isMatch: true),
+                                                        .matchupCeremony(couples: [9, 7, 6, 3, 9, 4, 2, 0, 5, 1], numberOfBeams: 6)
+                                                    ]),
+                                            Episode(id: 10,
+                                                    events: [
+                                                        .truthBooth(guy: 1, girl: 4, isMatch: true),
+                                                        .matchupCeremony(couples: [5, 4, 6, 3, 9, 8, 2, 0, 7, 1], numberOfBeams: 10)
+                                                    ])
                                         ])
 }
