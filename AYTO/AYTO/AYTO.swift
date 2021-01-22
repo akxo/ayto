@@ -56,12 +56,16 @@ struct AYTO {
             print("Truth Booth: \(season.guys[guy]) + \(season.girls[girl]) = \(emoji)\n")
             
         case .matchupCeremony(_, let numberOfBeams):
-            print("Matchup Ceremony: \(numberOfBeams) beam(s)\n")
+            if numberOfBeams == 0 {
+                print("Matchup Ceremony: BLACKOUT")
+            } else {
+                print("Matchup Ceremony: \(numberOfBeams) beam(s)\n")
+            }
         }
     }
     
     private static func printProbability(for guys: [String], and girls: [String], isIntro: Bool = false) {
-//        print("\(remainingGuesses.count) guess(es) left")
+        print("\(remainingGuesses.count) guess(es) left")
         let maxNumberOfCharacters = (guys + girls).map { $0.count }.max() ?? 0
         
         for row in -1..<girls.count {
