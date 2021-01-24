@@ -31,7 +31,7 @@ struct AYTO {
     private static func calculateProbability(after event: Event) {
         switch event {
         case .truthBooth(let guy, let girl, let isMatch):
-            remainingGuesses = remainingGuesses.filter { ($0[guy] == girl) == isMatch }
+            remainingGuesses = remainingGuesses.filter { ($0[girl] == guy) == isMatch }
             
         case .matchupCeremony(let couples, let numberOfBeams):
             remainingGuesses = remainingGuesses.filter { intersectionCount($0, couples) == numberOfBeams }
@@ -87,7 +87,7 @@ struct AYTO {
                     continue
                 }
                 
-                let numberOfGuesses = Double(remainingGuesses.filter { $0[col] == row }.count)
+                let numberOfGuesses = Double(remainingGuesses.filter { $0[row] == col }.count)
                 let totalNumberOfGuesses = Double(remainingGuesses.count)
                 let probability = Probability(numberOfGuesses / totalNumberOfGuesses)
                 let probabilityStr = probability.description.formatted(with: maxNumberOfCharacters)
