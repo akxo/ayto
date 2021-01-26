@@ -25,7 +25,9 @@ struct AYTO {
     }
     
     private static func allGuesses(for numberOfGuys: Int, and numberOfGirls: Int) -> [[Int]] {
-        return PermutationGenerator.permute(Array(0..<numberOfGuys))
+        let hasExtra = numberOfGuys != numberOfGirls
+        let array = Array(0..<min(numberOfGuys, numberOfGirls))
+        return PermutationGenerator.permute(array, hasExtra: hasExtra)
     }
     
     private static func calculateProbability(after event: Event) {

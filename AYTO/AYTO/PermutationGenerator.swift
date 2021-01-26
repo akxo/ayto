@@ -7,10 +7,21 @@
 
 struct PermutationGenerator {
     
-    static func permute(_ nums: [Int]) -> [[Int]] {
+    static func permute(_ nums: [Int], hasExtra: Bool) -> [[Int]] {
         var result = [[Int]]()
         var nums = nums
         recurse(0, &nums, &result)
+        
+        if hasExtra {
+            var newResult = [[Int]]()
+            
+            for i in nums.indices {
+                newResult += result.map { $0 + [i] }
+            }
+            
+            return newResult
+        }
+        
         return result
     }
     
