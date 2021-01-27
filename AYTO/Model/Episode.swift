@@ -5,7 +5,7 @@
 //  Created by Alex Kerendian on 1/14/21.
 //
 
-struct Episode: Decodable {
+struct Episode {
     let id: Int
     let events: [Event]
 }
