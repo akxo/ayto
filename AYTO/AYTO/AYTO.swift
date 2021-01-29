@@ -35,6 +35,9 @@ struct AYTO {
         case .truthBooth(let guy, let girl, let isMatch):
             remainingGuesses = remainingGuesses.filter { ($0[girl] == guy) == isMatch }
             
+        case .truthBoothExtraGirl(let guy, let girl, let isMatch, let extraGirl, let isMatchWithExtraGirl):
+            remainingGuesses = remainingGuesses.filter { ($0[girl] == guy) == isMatch && ($0[extraGirl] == guy) == isMatchWithExtraGirl }
+            
         case .matchupCeremony(let couples, let numberOfBeams):
             remainingGuesses = remainingGuesses.filter { intersectionCount($0, couples) == numberOfBeams }
         }
@@ -56,6 +59,12 @@ struct AYTO {
         case .truthBooth(let guy, let girl, let isMatch):
             let emoji = isMatch ? "✅" : "❌"
             print("Truth Booth: \(season.guys[guy]) + \(season.girls[girl]) = \(emoji)\n")
+            
+        case .truthBoothExtraGirl(let guy, let girl, let isMatch, let extraGirl, let isMatchWithExtraGirl):
+            let emoji = isMatch ? "✅" : "❌"
+            let extraEmoji = isMatchWithExtraGirl ? "✅" : "❌"
+            print("Truth Booth: \(season.guys[guy]) + \(season.girls[girl]) = \(emoji)")
+            print("             \(season.guys[guy]) + \(season.girls[extraGirl]) = \(extraEmoji)\n")
             
         case .matchupCeremony(_, let numberOfBeams):
             print("Matchup Ceremony: \(numberOfBeams) beam(s)\n")
